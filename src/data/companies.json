@@ -1,0 +1,46 @@
+[
+  {
+    "name": "MATERIALES VÁSQUEZ HNOS S.A. DE C.V.",
+    "logos": [
+      "https://res.cloudinary.com/duibtuerj/image/upload/v1630083340/brand/meta-image_rcclee.jpg"
+    ],
+    "description": "24 años de experiencia en la compra-venta de Material para Construcción de Obra Negra, Acabados, Iluminación, manejando los mejores productos del país, logrando distribuir a todo el estado de Veracruz. Con los mejores Productos de los Mejores Proveedores.",
+    "location": "https://",
+    "email": "contacto@vasquez.com",
+    "phone": "2288454545",
+    "web": "https://www.materialesvasquezhnos.com.mx",
+    "bgColor": "#E7E7E7"
+  },
+  {
+    "name": "CONSTRUCTORAS VÁSQUEZ S.A. DE C.V.",
+    "logos": [
+      "https://res.cloudinary.com/duibtuerj/image/upload/v1631812830/vasquez-inmobiliaria/brand/Logo_okzkag.png"
+    ],
+    "description": "Especialización: Urbanización, Construcción Residencial, Movimiento de Tierras, Pavimentación concreto Asfaltico e Hidráulico, Líneas de Conducción de Agua, Tanques Elevados, Drenaje Sanitario, Drenaje Pluvial, Remodelación Casa Habitación, Mantenimiento Centros de Salud, Puentes",
+    "location": "https://",
+    "email": "contacto@vasquez.com",
+    "phone": "2288454545",
+    "web": "https://www.inmobiliariavasquez.mx/",
+    "bgColor": "#FFFFFF"
+  },
+  {
+    "name": "TRANSPORTES VÁSQUEZ S.A. DE C.V.",
+    "logos": [],
+    "description": "Contamos con un extenso patio de servicio en donde tenemos vigilancia y espacio suficiente para el resguardo de las unidades y de la carga que transportamos.",
+    "location": "https://",
+    "email": "contacto@vasquez.com",
+    "phone": "2288454545",
+    "web": null,
+    "bgColor": "#8DCFF4"
+  },
+  {
+    "name": "HYDE Saloon",
+    "logos": [],
+    "description": "Elegancia, tecnología y comodidad.",
+    "location": null,
+    "email": "contacto@vasquez.com",
+    "phone": "2288454545",
+    "web": null,
+    "bgColor": "#FAF9F5"
+  }
+]

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <title>Grupo Vaquez</title>
+  </head>
+  <body>
+    <!-- Welcome -->
+    <section
+      class="w-screen h-screen flex flex-col justify-start items-start bg-linear-gradient relative overflow-hidden"
+    >
+      <header class="w-full p-4 flex justify-between item-center relative z-10">
+        <div
+          class="w-24 flex justify-center items-center"
+          id="logo-container"
+        ></div>
+        <button
+          type="button"
+          class="w-10 h-10 flex justify-center items-center"
+          id="menu-button"
+          aria-label="Abrir menú"
+        ></button>
+      </header>
+
+      <section
+        class="w-full p-4 flex flex-col justify-start items-start relative z-10"
+      >
+        <h2 class="font-bold text-5xl text-white leading-[4rem]">
+          Asesoría y soluciones en sus diferentes divisiones.
+        </h2>
+
+        <div
+          class="w-full mt-8 p-4 flex justify-around items-center relative z-10"
+        >
+          <button
+            type="button"
+            class="py-2 px-4 bg-white text-[#092529] font-bold rounded-lg"
+          >
+            Conócenos
+          </button>
+
+          <button
+            type="button"
+            class="py-2 px-4 border-[1px] border-[#2BE8C0] text-[#2BE8C0] font-bold rounded-lg"
+          >
+            Contáctanos
+          </button>
+        </div>
+      </section>
+
+      <div
+        class="w-[250px] absolute bottom-6 right-6 z-[1] md:w-[400px]"
+        id="svg-meeting-container"
+      >
+        <div
+          class="w-[200%] aspect-square absolute -top-1/2 -left-1/2 bg-gradient-radial z-[-1]"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Submission -->
+    <section
+      class="w-full p-4 mt-10 flex flex-col justify-start items-center"
+      id="pillars-container"
+    >
+      <h3 class="font-black text-[#267984] text-lg">
+        ¿Qué es Grupo Empresarial Vásquez?
+      </h3>
+    </section>
+
+    <!-- Reasons -->
+    <section class="w-full p-4 relative">
+      <div
+        class="w-full flex flex-col justify-start items-center relative z-10"
+      >
+        <div class="w-4/5" id="cart-container"></div>
+
+        <div class="w-full mt-4 flex flex-col justify-start items-center">
+          <h4 class="w-[90%] font-bold text-4xl text-[#267984]">
+            Con más de 500 proyectos realizados en más de 20 años.
+          </h4>
+          <p class="w-full mt-8 text-center text-[#267984]">
+            Seguimos ofreciendo resultados y modernizándonos para ofrecer
+            siempre el mejor servicio.
+          </p>
+        </div>
+      </div>
+      <div
+        class="w-full h-full max-h-52 grid grid-cols-3 absolute top-0 left-0 right-0 z-0"
+      >
+        <div class="w-full h-full bg-[#348F98]"></div>
+        <div class="w-full h-full bg-[#F8FEFC]"></div>
+      </div>
+    </section>
+
+    <!-- Companies -->
+    <section
+      class="w-full flex flex-col justify-start items-center"
+      id="companies-container"
+    ></section>
+
+    <!-- Preguntas frecuentes -->
+    <section
+      class="w-full p-4 py-8 flex flex-col justify-start items-center bg-[#92DBC0]"
+      id="frequently-asked-uestions"
+    >
+      <h3 class="font-black text-[#1C444C] text-lg">Preguntas frecuentes</h3>
+
+      <details class="w-full p-4 my-2 bg-white rounded">
+        <summary
+          class="font-bold text-[#267984] list-none relative after:content-['\002B'] after:h-[1.5rem] after:text-[1.5rem] after:font-bold after:text-[#267984] after:absolute after:top-[-0.5rem] after:right-0"
+        >
+          ¿Dónde están ubicados?
+        </summary>
+        <p class="mt-8">
+          Margarita Olivo Lara #15 Col. Rafael Lucio, C.P. 91110, Xalapa,
+          Veracruz, México.
+        </p>
+      </details>
+
+      <details class="w-full p-4 my-2 bg-white rounded">
+        <summary
+          class="font-bold text-[#267984] list-none relative after:content-['\002B'] after:h-[1.5rem] after:text-[1.5rem] after:font-bold after:text-[#267984] after:absolute after:top-[-0.5rem] after:right-0"
+        >
+          ¿Cómo puedo contactarlos?
+        </summary>
+        <ol class="mt-8">
+          <li class="mt-4">Teléfono: 2282107188</li>
+          <li class="mt-4">Correo electronico: civsa@grupovasquez.com.mx</li>
+        </ol>
+      </details>
+    </section>
+
+    <footer>
+      <p>@2022 All rights reserved</p>
+    </footer>
+    <script src="./js/svg/meeting-team-work.js" type="module"></script>
+    <script src="./js/svg/icon-menu.js" type="module"></script>
+    <script src="./js/svg/logo-grupo.js" type="module"></script>
+    <script src="./js/svg/icon-test.js" type="module"></script>
+    <script src="./js/svg/chart.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
