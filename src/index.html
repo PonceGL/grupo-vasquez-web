@@ -11,49 +11,85 @@
   <body>
     <!-- Welcome -->
     <section
-      class="w-screen h-screen flex flex-col justify-start items-start bg-linear-gradient relative overflow-hidden"
+      class="w-screen h-screen flex flex-col justify-start items-start bg-linear-gradient relative overflow-hidden xl:grid xl:grid-cols-2 xl:gap-x-8"
     >
-      <header class="w-full p-4 flex justify-between item-center relative z-10">
-        <div
-          class="w-24 flex justify-center items-center"
-          id="logo-container"
-        ></div>
+      <header
+        class="w-full p-4 flex justify-between item-center relative z-[11] xl:col-span-2"
+      >
+        <div class="w-24 flex justify-center items-center" id="logo-container">
+          <img src="./assets/Logo.png" alt="Lotogipo grupo vasquez" />
+        </div>
         <button
           type="button"
           class="w-10 h-10 flex justify-center items-center"
           id="menu-button"
           aria-label="Abrir menú"
         ></button>
+        <!-- Menu -->
+        <nav
+          class="w-screen h-screen px-4 pt-4 bg-menu-gradient bg-[#092529] fixed top-0 -right-full z-50 transition-all duration-300"
+          id="main-menu"
+        >
+          <div class="w-full flex justify-end items-center">
+            <button
+              type="button"
+              class="w-10 h-10 flex justify-center items-center"
+              id="menu-button-close"
+              aria-label="Cerrar menú"
+            ></button>
+          </div>
+          <ul
+            class="w-full flex flex-col justify-start items-start"
+            id="companies-menu"
+          >
+            <li class="w-full my-4">
+              <a
+                href="#pillars-container"
+                class="w-full p-2 text-white text-3xl hover:text-[#2BE8C0] outline-[#2BE8C0] transition-all duration-300"
+              >
+                Conócenos
+              </a>
+            </li>
+            <li class="w-full my-4">
+              <a
+                href="#contact-us"
+                class="w-full p-2 text-white text-3xl hover:border-white hover:text-white outline-white transition-all duration-300"
+              >
+                Contáctanos
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
       <section
-        class="w-full p-4 flex flex-col justify-start items-start relative z-10"
+        class="w-full p-4 flex flex-col justify-start items-start relative z-10 md:w-4/5 md:mx-auto md:mt-16 xl:mt-0"
       >
-        <h2 class="font-bold text-5xl text-white leading-[4rem]">
-          Asesoría y soluciones en sus diferentes divisiones.
+        <h2 class="font-bold text-5xl text-white leading-[4rem] md:text-7xl">
+          Asesoría y soluciones en sus diferentes divisiones
         </h2>
 
         <div
           class="w-full mt-8 p-4 flex justify-around items-center relative z-10"
         >
-          <button
-            type="button"
-            class="py-2 px-4 bg-white text-[#092529] font-bold rounded-lg"
+          <a
+            href="#pillars-container"
+            class="py-2 px-4 border-[1px] border-white bg-white text-[#092529] font-bold rounded-lg hover:bg-[#2BE8C0] outline-[#2BE8C0] transition-all duration-300"
           >
             Conócenos
-          </button>
+          </a>
 
-          <button
-            type="button"
-            class="py-2 px-4 border-[1px] border-[#2BE8C0] text-[#2BE8C0] font-bold rounded-lg"
+          <a
+            href="#contact-us"
+            class="py-2 px-4 border-[1px] border-[#2BE8C0] text-[#2BE8C0] font-bold rounded-lg hover:border-white hover:text-white outline-white transition-all duration-300"
           >
             Contáctanos
-          </button>
+          </a>
         </div>
       </section>
 
       <div
-        class="w-[250px] absolute bottom-6 right-6 z-[1] md:w-[400px]"
+        class="w-[250px] absolute bottom-6 right-6 z-[1] md:w-[400px] md:bottom-14 md:right-14"
         id="svg-meeting-container"
       >
         <div
@@ -64,33 +100,41 @@
 
     <!-- Submission -->
     <section
-      class="w-full p-4 mt-10 flex flex-col justify-start items-center"
+      class="w-full p-4 mt-10 grid grid-cols-1 gap-4 justify-items-center md:grid-cols-3 md:gap-y-16"
       id="pillars-container"
     >
-      <h3 class="font-black text-[#267984] text-lg">
+      <h3 class="font-black text-[#267984] text-lg md:text-2xl md:col-span-3">
         ¿Qué es Grupo Empresarial Vásquez?
       </h3>
     </section>
 
     <!-- Reasons -->
-    <section class="w-full p-4 relative">
+    <section class="w-full p-4 relative md:my-16 lg:py-16">
       <div
-        class="w-full flex flex-col justify-start items-center relative z-10"
+        class="w-full flex flex-col justify-start items-center relative z-10 md:flex-row md:justify-between lg:grid lg:grid-cols-2 lg:gap-4"
       >
-        <div class="w-4/5" id="cart-container"></div>
+        <div
+          class="w-4/5 md:scale-150 md:-translate-x-16 lg:-translate-x-32 lg:w-full xl:scale-100 xl:-translate-x-0"
+          id="cart-container"
+        ></div>
 
-        <div class="w-full mt-4 flex flex-col justify-start items-center">
-          <h4 class="w-[90%] font-bold text-4xl text-[#267984]">
+        <div
+          class="w-full mt-4 flex flex-col justify-start items-center md:mt-0 md:ml-4 lg:ml-0"
+        >
+          <h4
+            class="w-[90%] font-bold text-4xl text-[#267984] md:text-6xl lg:w-full xl:text-7xl"
+          >
             Con más de 500 proyectos realizados en más de 20 años.
           </h4>
-          <p class="w-full mt-8 text-center text-[#267984]">
+          <p class="w-full mt-8 text-center text-[#267984] lg:text-left">
             Seguimos ofreciendo resultados y modernizándonos para ofrecer
             siempre el mejor servicio.
           </p>
         </div>
       </div>
+
       <div
-        class="w-full h-full max-h-52 grid grid-cols-3 absolute top-0 left-0 right-0 z-0"
+        class="w-full h-full max-h-52 grid grid-cols-3 absolute top-0 left-0 right-0 z-0 md:max-h-max"
       >
         <div class="w-full h-full bg-[#348F98]"></div>
         <div class="w-full h-full bg-[#F8FEFC]"></div>
@@ -99,18 +143,25 @@
 
     <!-- Companies -->
     <section
-      class="w-full flex flex-col justify-start items-center"
+      class="w-full grid grid-cols-1 gap-0 justify-items-center md:grid-cols-2 xl:grid-cols-4"
       id="companies-container"
-    ></section>
+    >
+      <p class="bg-[#E7E7E7] hidden">E7E7E7</p>
+      <p class="bg-[#FFFFFF] hidden">FFFFFF</p>
+      <p class="bg-[#8DCFF4] hidden">8DCFF4</p>
+      <p class="bg-[#FAF9F5] hidden">FAF9F5</p>
+    </section>
 
     <!-- Preguntas frecuentes -->
     <section
-      class="w-full p-4 py-8 flex flex-col justify-start items-center bg-[#92DBC0]"
+      class="w-full p-4 py-8 flex flex-col justify-start items-center bg-[#92DBC0] md:py-16"
       id="frequently-asked-uestions"
     >
       <h3 class="font-black text-[#1C444C] text-lg">Preguntas frecuentes</h3>
 
-      <details class="w-full p-4 my-2 bg-white rounded">
+      <details
+        class="w-full p-4 my-2 bg-white rounded md:w-2/3 lg:w-1/2 xl:w-1/3"
+      >
         <summary
           class="font-bold text-[#267984] list-none relative after:content-['\002B'] after:h-[1.5rem] after:text-[1.5rem] after:font-bold after:text-[#267984] after:absolute after:top-[-0.5rem] after:right-0"
         >
@@ -122,7 +173,9 @@
         </p>
       </details>
 
-      <details class="w-full p-4 my-2 bg-white rounded">
+      <details
+        class="w-full p-4 my-2 bg-white rounded md:w-2/3 lg:w-1/2 xl:w-1/3"
+      >
         <summary
           class="font-bold text-[#267984] list-none relative after:content-['\002B'] after:h-[1.5rem] after:text-[1.5rem] after:font-bold after:text-[#267984] after:absolute after:top-[-0.5rem] after:right-0"
         >
@@ -135,11 +188,16 @@
       </details>
     </section>
 
+    <!-- Footer -->
+
     <footer
-      class="w-screen p-4 text-white grid grid-cols-1 gap-4 bg-footer-gradient relative overflow-hidden"
+      class="w-screen p-4 text-white grid grid-cols-1 gap-4 bg-footer-gradient relative overflow-hidden md:pt-16 md:gap-8 xl:grid-cols-2"
+      id="contact-us"
     >
-      <section class="w-full grid grid-cols-1 gap-4">
-        <h3 class="font-bold text-4xl text-white">
+      <section
+        class="w-full grid grid-cols-1 gap-4 md:justify-items-center md:grid-cols-2 md:gap-8"
+      >
+        <h3 class="font-bold text-4xl text-white md:text-6xl">
           ¿Listo para empezar a trabajar juntos?
         </h3>
         <form class="w-full p-4 bg-white rounded-2xl">
@@ -189,7 +247,7 @@
           </button>
         </form>
       </section>
-      <section class="w-full grid grid-cols-1 gap-4">
+      <section class="w-full grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
         <div>
           <h4 class="font-bold opacity-70">Enlaces</h4>
           <nav>
@@ -209,12 +267,13 @@
           </nav>
         </div>
       </section>
-      <p class="w-full text-center text-sm opacity-50">
+      <p class="w-full text-center text-sm opacity-50 xl:col-span-2">
         @2022 All rights reserved
       </p>
     </footer>
     <script src="./js/svg/meeting-team-work.js" type="module"></script>
     <script src="./js/svg/icon-menu.js" type="module"></script>
+    <script src="./js/svg/icon-x.js" type="module"></script>
     <script src="./js/svg/logo-grupo.js" type="module"></script>
     <script src="./js/svg/icon-test.js" type="module"></script>
     <script src="./js/svg/chart.js" type="module"></script>

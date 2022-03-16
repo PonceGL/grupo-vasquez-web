@@ -1,6 +1,7 @@
 import MeetingTeamWork from "./svg/meeting-team-work.js";
 import IconMenu from "./svg/icon-menu.js";
-import LogoGrupo from "./svg/logo-grupo.js";
+import IconX from "./svg/icon-x.js";
+// import LogoGrupo from "./svg/logo-grupo.js";
 import IconTest from "./svg/icon-test.js";
 import Chart from "./svg/chart.js";
 import IconMail from "./svg/icon-mail.js";
@@ -13,9 +14,12 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
   // Accede a elementos del DOM
   const svgMeetingContainer = document.getElementById("svg-meeting-container");
   const menuButton = document.getElementById("menu-button");
-  const logoContainer = document.getElementById("logo-container");
+  const menuButtonClose = document.getElementById("menu-button-close");
+  const mainMenu = document.getElementById("main-menu");
+  // const logoContainer = document.getElementById("logo-container");
   const pillarsContainer = document.getElementById("pillars-container");
   const cartContainer = document.getElementById("cart-container");
+  const companiesMenu = document.getElementById("companies-menu");
   const companiesContainer = document.getElementById("companies-container");
   const listLinks = document.getElementById("list-links");
   const listContact = document.getElementById("list-contact");
@@ -23,10 +27,36 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
   // Variables Globales
 
   // Añade SVG al DOM
-  logoContainer.innerHTML += LogoGrupo();
+  // logoContainer.innerHTML += LogoGrupo();
   svgMeetingContainer.innerHTML += MeetingTeamWork();
   menuButton.innerHTML = IconMenu();
+  menuButtonClose.innerHTML = IconX();
   cartContainer.innerHTML = Chart();
+
+  // Abrir Cerrar Menú
+
+  const handleMenuOpen = () => {
+    console.log("handleMenuOpen");
+    console.log(mainMenu);
+
+    if (mainMenu.classList.contains("right-0")) {
+      mainMenu.classList.remove("right-0");
+      mainMenu.classList.add("-right-full");
+    } else {
+      mainMenu.classList.add("right-0");
+      mainMenu.classList.remove("-right-full");
+    }
+  };
+
+  menuButton.addEventListener("click", handleMenuOpen);
+  menuButtonClose.addEventListener("click", handleMenuOpen);
+  window.addEventListener("hashchange", () => {
+    console.log("====================================");
+    console.log("hashchange");
+    console.log("====================================");
+    mainMenu.classList.remove("right-0");
+    mainMenu.classList.add("-right-full");
+  });
 
   // Solicita data de pillares de la empresa
   const addPillarsData = async () => {
@@ -36,7 +66,7 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
 
       pillars.map(({ title, description }) => {
         pillarsContainer.innerHTML += `
-              <div class="w-full p-4 flex flex-col justify-start items-center">
+              <div class="w-full p-4 flex flex-col justify-start items-center md:p-0">
                   <div class="w-14 h-14 flex justify-center items-center">${IconTest()}</div>
                   <h4 class="my-4 font-black text-[#267984] text-base">${title}</h4>
                   <p class="text-center">${description}</p>
@@ -68,8 +98,11 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
           web,
         }) => {
           companiesContainer.innerHTML += `
-            <div class="w-full p-4 py-10 flex flex-col justify-start items-center bg-[${bgColor}]">
-              <h4 class="my-4 text-2xl font-black text-[#267984] text-center">
+            <div 
+              class="w-full p-4 py-10 flex flex-col justify-start items-center bg-[${bgColor}] lg:grid lg:grid-cols-1 lg:grid-rows-[20%_30%_50%] lg:items-start"
+              id="${name.toLowerCase().replace(/ /g, "-")}"
+            >
+              <h4 class="my-4 text-2xl font-black text-[#267984] text-center lg:m-0">
                 ${name}
               </h4>
 
@@ -80,7 +113,7 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
               ${logos
                 .map(
                   (logo) => `
-              <div class="w-24 m-4 flex justify-center items-center">
+              <div class="w-24 m-4 flex justify-center items-center lg:mt-0">
                 <img src="${logo}" alt="Logotipo de ${name}" class="w-full object-contain">
               </div>
               `
@@ -94,6 +127,17 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
                 ${description}
               </p>
             </div>
+          `;
+
+          companiesMenu.innerHTML += `
+            <li class="w-full my-4">
+              <a
+                href="#${name.toLowerCase().replace(/ /g, "-")}"
+                class="w-full p-2 text-white text-3xl capitalize hover:text-[#2BE8C0] outline-[#2BE8C0] transition-all duration-300"
+              >
+              ${name.toLowerCase().replace(/ s.a. de c.v./, "")}
+              </a>
+            </li>
           `;
 
           if (!!web) {
