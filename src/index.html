@@ -135,8 +135,83 @@
       </details>
     </section>
 
-    <footer>
-      <p>@2022 All rights reserved</p>
+    <footer
+      class="w-screen p-4 text-white grid grid-cols-1 gap-4 bg-footer-gradient relative overflow-hidden"
+    >
+      <section class="w-full grid grid-cols-1 gap-4">
+        <h3 class="font-bold text-4xl text-white">
+          ¿Listo para empezar a trabajar juntos?
+        </h3>
+        <form class="w-full p-4 bg-white rounded-2xl">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Nombre"
+            class="w-full px-4 py-2 my-1 border-[1px] border-[#267984] rounded-lg text-[#267984] placeholder-[#267984] placeholder:font-bold focus:border-[#2BE8C0] outline-[#2BE8C0]"
+            required
+          />
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Asunto"
+            class="w-full px-4 py-2 my-1 border-[1px] border-[#267984] rounded-lg text-[#267984] placeholder-[#267984] placeholder:font-bold focus:border-[#2BE8C0] outline-[#2BE8C0]"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Correo Electronico"
+            class="w-full px-4 py-2 my-1 border-[1px] border-[#267984] rounded-lg text-[#267984] placeholder-[#267984] placeholder:font-bold focus:border-[#2BE8C0] outline-[#2BE8C0]"
+            required
+          />
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Teléfono"
+            class="w-full px-4 py-2 my-1 border-[1px] border-[#267984] rounded-lg text-[#267984] placeholder-[#267984] placeholder:font-bold focus:border-[#2BE8C0] outline-[#2BE8C0]"
+          />
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Mensaje"
+            class="w-full min-h-[100px] max-h-[200px] resize-y px-4 py-2 my-1 border-[1px] border-[#267984] rounded-lg text-[#267984] placeholder-[#267984] placeholder:font-bold focus:border-[#2BE8C0] outline-[#2BE8C0]"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full py-1 px-4 mt-1 bg-[#2BE8C0] text-[#267984] font-bold rounded-lg"
+          >
+            Enviar
+          </button>
+        </form>
+      </section>
+      <section class="w-full grid grid-cols-1 gap-4">
+        <div>
+          <h4 class="font-bold opacity-70">Enlaces</h4>
+          <nav>
+            <ul
+              class="w-full flex- flex-col justify-start items-start"
+              id="list-links"
+            ></ul>
+          </nav>
+        </div>
+        <div>
+          <h4 class="font-bold opacity-70">Contacto</h4>
+          <nav>
+            <ul
+              class="w-full flex- flex-col justify-start items-start"
+              id="list-contact"
+            ></ul>
+          </nav>
+        </div>
+      </section>
+      <p class="w-full text-center text-sm opacity-50">
+        @2022 All rights reserved
+      </p>
     </footer>
     <script src="./js/svg/meeting-team-work.js" type="module"></script>
     <script src="./js/svg/icon-menu.js" type="module"></script>

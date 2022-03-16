@@ -3,6 +3,11 @@ import IconMenu from "./svg/icon-menu.js";
 import LogoGrupo from "./svg/logo-grupo.js";
 import IconTest from "./svg/icon-test.js";
 import Chart from "./svg/chart.js";
+import IconMail from "./svg/icon-mail.js";
+import IconPhone from "./svg/icon-phone.js";
+import IconLocation from "./svg/icon-location.js";
+import IconFacebook from "./svg/icon-facebook.js";
+import IconWhatsapp from "./svg/icon-whatsapp.js";
 
 (function () {
   // Accede a elementos del DOM
@@ -12,6 +17,8 @@ import Chart from "./svg/chart.js";
   const pillarsContainer = document.getElementById("pillars-container");
   const cartContainer = document.getElementById("cart-container");
   const companiesContainer = document.getElementById("companies-container");
+  const listLinks = document.getElementById("list-links");
+  const listContact = document.getElementById("list-contact");
 
   // Variables Globales
 
@@ -88,6 +95,17 @@ import Chart from "./svg/chart.js";
               </p>
             </div>
           `;
+
+          if (!!web) {
+            listLinks.innerHTML += `
+            <li class="w-full my-2">
+              <a href="${web}" class="capitalize" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a página web de ${name.toLowerCase()}">${name.toLowerCase()}</a>
+            </li>
+            `;
+          }
         }
       );
     } catch (error) {
@@ -96,4 +114,115 @@ import Chart from "./svg/chart.js";
   };
 
   addCompaniesData();
+
+  // Solicita la informacion de contacto de la empresa
+  const addContactData = async () => {
+    try {
+      const response = await window.fetch("./data/contactdata.json");
+      const data = await response.json();
+
+      const { mail, phones, location, facebook, whatsapp } = data;
+
+      if (!!mail) {
+        listContact.innerHTML += `
+         <li class="w-full my-2">
+           <a href="mailto:${mail}?subject=Contacto%20desde%20su%20p%C3%A1gina%20web&body=Hola%2C%20me%20pueden%20contactar%20por%20favor%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n."
+              class="flex justify-start items-center" 
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Enlace a correo electronico ${mail.toLowerCase()}">
+              <div
+                  class="w-5 h-5 mr-2 flex justify-center items-center"
+                >
+                ${IconMail()}
+                </div>
+               ${mail.toLowerCase()}
+             </a>
+         </li>
+       `;
+      }
+
+      if (phones.length > 0) {
+        phones.map(
+          (phone) => `
+          ${(listContact.innerHTML += `
+              <li class="w-full my-2">
+                <a href="tel:+521${phone}" class="flex justify-start items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Enlace a número de telefono ${phone.toLowerCase()}">
+                    <div
+                  class="w-5 h-5 mr-2 flex justify-center items-center"
+                >
+                ${IconPhone()}
+                </div>
+                    ${phone.toLowerCase()}
+                  </a>
+              </li>
+            `)}
+        `
+        );
+      }
+
+      if (!!location) {
+        listContact.innerHTML += `
+          <li class="w-full my-2">
+            <a href="${
+              location.link
+            }" class="flex justify-start items-center capitalize"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a google maps">
+                <div
+                  class="w-5 h-5 mr-2 flex justify-center items-center"
+                >
+                ${IconLocation()}
+                </div>
+                ${location.name.toLowerCase()}
+              </a>
+          </li>
+        `;
+      }
+
+      if (!!facebook) {
+        listContact.innerHTML += `
+          <li class="w-full my-2">
+            <a href="${facebook}" class="flex justify-start items-center capitalize"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a google Facebook">
+                <div
+                  class="w-5 h-5 mr-2 flex justify-center items-center"
+                >
+                ${IconFacebook()}
+                </div>
+                Facebook
+              </a>
+          </li>
+        `;
+      }
+
+      if (!!whatsapp) {
+        listContact.innerHTML += `
+          <li class="w-full my-2">
+            <a href="https://api.whatsapp.com/send?phone=+52${whatsapp}" class="flex justify-start items-center capitalize" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enlace a google WhatApp">
+                <div
+                  class="w-5 h-5 mr-2 flex justify-center items-center"
+                >
+                ${IconWhatsapp()}
+                </div>
+                WhatApp
+              </a>
+          </li>
+        `;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  addContactData();
 })();
