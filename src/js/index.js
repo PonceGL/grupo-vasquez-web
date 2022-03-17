@@ -37,9 +37,6 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
   // Abrir Cerrar Menú
 
   const handleMenuOpen = () => {
-    console.log("handleMenuOpen");
-    console.log(mainMenu);
-
     if (mainMenu.classList.contains("right-0")) {
       mainMenu.classList.remove("right-0");
       mainMenu.classList.add("-right-full");
