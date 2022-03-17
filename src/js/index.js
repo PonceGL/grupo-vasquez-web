@@ -23,6 +23,7 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
   const companiesContainer = document.getElementById("companies-container");
   const listLinks = document.getElementById("list-links");
   const listContact = document.getElementById("list-contact");
+  const buttonUp = document.getElementById("button-up");
 
   // Variables Globales
 
@@ -51,9 +52,6 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
   menuButton.addEventListener("click", handleMenuOpen);
   menuButtonClose.addEventListener("click", handleMenuOpen);
   window.addEventListener("hashchange", () => {
-    console.log("====================================");
-    console.log("hashchange");
-    console.log("====================================");
     mainMenu.classList.remove("right-0");
     mainMenu.classList.add("-right-full");
   });
@@ -130,10 +128,10 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
           `;
 
           companiesMenu.innerHTML += `
-            <li class="w-full my-4">
+            <li class="w-full my-4 lg:w-fit lg:mx-2">
               <a
                 href="#${name.toLowerCase().replace(/ /g, "-")}"
-                class="w-full p-2 text-white text-3xl capitalize hover:text-[#2BE8C0] outline-[#2BE8C0] transition-all duration-300"
+                class="w-full p-2 text-white text-3xl whitespace-nowrap capitalize hover:text-[#2BE8C0] outline-[#2BE8C0] transition-all duration-300 lg:text-lg"
               >
               ${name.toLowerCase().replace(/ s.a. de c.v./, "")}
               </a>
@@ -269,4 +267,13 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
   };
 
   addContactData();
+
+  document.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    if (scroll > 1000) {
+      buttonUp.classList.remove("hidden");
+    } else {
+      buttonUp.classList.add("hidden");
+    }
+  });
 })();
