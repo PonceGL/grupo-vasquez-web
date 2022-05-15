@@ -2,45 +2,108 @@
   {
     "name": "MATERIALES VÁSQUEZ HNOS S.A. DE C.V.",
     "logos": [
-      "https://res.cloudinary.com/duibtuerj/image/upload/v1630083340/brand/meta-image_rcclee.jpg"
+      "https://mjmpaqueteria.com/images/ba9c3a87af0ff56874cc1c4968f1b8b8.svg"
     ],
     "description": "24 años de experiencia en la compra-venta de Material para Construcción de Obra Negra, Acabados, Iluminación, manejando los mejores productos del país, logrando distribuir a todo el estado de Veracruz. Con los mejores Productos de los Mejores Proveedores.",
-    "location": "https://",
+    "branches": [
+      {
+        "name": "SUCURSAL ALTO LUCERO",
+        "addres": "AV. CONGRESO #18, COL. CENTRO, C.P. 91460, ALTO LUCERO, VER."
+      },
+      {
+        "name": "SUCURSAL ATENAS",
+        "addres": "AV. ATENAS VERACRUZANA #1906, COL. REVOLUCIÓN, C.P. 91110, XALAPA, VER."
+      },
+      {
+        "name": "SUCURSAL CASTILLO",
+        "addres": "CARRETERA XALAPA-CASTILLO #201, COL. LA TRANCA, C.P. 91165, XALAPA, VER."
+      },
+      {
+        "name": "SUCURSAL BANDERILLA",
+        "addres": "CARRETERA NACIONAL XALAPA-BANDERILLA S/N KM. 2, COL. CENTRO, BANDERILLA, VER."
+      },
+      {
+        "name": "SUCURSAL MARGARITA OLIVO",
+        "addres": "CALLE MARGARITA OLIVO LARA #15, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER."
+      },
+      {
+        "name": "SUCURSAL LAZARO CARDENAS",
+        "addres": "AV. LAZARO CARDENAS #274. COL. ENCINAL, C.P. 91180, XALAPA, VER."
+      },
+      {
+        "name": "SUCURSAL HOME CENTER",
+        "addres": "AV. LAZARO CARDENAS #410, COL. BADILLO, C.P. 91180, XALAPA, VER."
+      }
+    ],
+    "addres": "AV. LAZARO CARDENAS #274. COL. ENCINAL, C.P. 91180, XALAPA, VER.",
     "email": "contacto@vasquez.com",
-    "phone": "2288454545",
+    "phone": ["2288401919"],
     "web": "https://www.materialesvasquezhnos.com.mx",
     "bgColor": "#E7E7E7"
   },
   {
-    "name": "CONSTRUCTORAS VÁSQUEZ S.A. DE C.V.",
+    "name": "CONSTRUCTORA E INMOBILIARIA VASQUEZ",
     "logos": [
-      "https://res.cloudinary.com/duibtuerj/image/upload/v1631812830/vasquez-inmobiliaria/brand/Logo_okzkag.png"
+      "https://mjmpaqueteria.com/images/ba9c3a87af0ff56874cc1c4968f1b8b8.svg"
     ],
     "description": "Especialización: Urbanización, Construcción Residencial, Movimiento de Tierras, Pavimentación concreto Asfaltico e Hidráulico, Líneas de Conducción de Agua, Tanques Elevados, Drenaje Sanitario, Drenaje Pluvial, Remodelación Casa Habitación, Mantenimiento Centros de Salud, Puentes",
-    "location": "https://",
+    "branches": [],
+    "addres": "CALLE MARGARITA OLIVO LARA #15, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER.",
     "email": "contacto@vasquez.com",
-    "phone": "2288454545",
+    "phone": ["2282903272", "2282903273"],
     "web": "https://www.inmobiliariavasquez.mx/",
     "bgColor": "#FFFFFF"
   },
   {
     "name": "TRANSPORTES VÁSQUEZ S.A. DE C.V.",
-    "logos": [],
+    "logos": [
+      "https://mjmpaqueteria.com/images/ba9c3a87af0ff56874cc1c4968f1b8b8.svg"
+    ],
     "description": "Contamos con un extenso patio de servicio en donde tenemos vigilancia y espacio suficiente para el resguardo de las unidades y de la carga que transportamos.",
-    "location": "https://",
+    "branches": [],
+    "addres": "CALLE MARGARITA OLIVO LARA #15, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER.",
     "email": "contacto@vasquez.com",
-    "phone": "2288454545",
+    "phone": ["2281550849"],
     "web": null,
-    "bgColor": "#8DCFF4"
+    "bgColor": "#c4eaff"
   },
   {
     "name": "HYDE Saloon",
-    "logos": [],
+    "logos": [
+      "https://mjmpaqueteria.com/images/ba9c3a87af0ff56874cc1c4968f1b8b8.svg"
+    ],
     "description": "Elegancia, tecnología y comodidad.",
-    "location": null,
+    "branches": [],
+    "addres": "",
     "email": "contacto@vasquez.com",
-    "phone": "2288454545",
+    "phone": ["2288454545"],
     "web": null,
     "bgColor": "#FAF9F5"
+  },
+  {
+    "name": "MJM Paquetería",
+    "logos": [
+      "https://mjmpaqueteria.com/images/ba9c3a87af0ff56874cc1c4968f1b8b8.svg"
+    ],
+    "description": "Servicios especializados de Transporte terrestre y Logística de mercancías, productos y maquinaria, con altos niveles de calidad y seguridad.",
+    "branches": [],
+    "addres": "CALLE CIRILO CELIS PASTRANA #4, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER.",
+    "email": "transportesmjm1@gmail.com",
+    "phone": ["2281338418"],
+    "web": "https://mjmpaqueteria.com/",
+    "bgColor": "#ffe9d5"
+  },
+  {
+    "name": "MANTENIMIENTO Y REFACCIONES GV",
+    "logos": [
+      "https://mjmpaqueteria.com/images/ba9c3a87af0ff56874cc1c4968f1b8b8.svg"
+    ],
+    "description": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500",
+    "branches": [],
+    "addres": "HERMINIO CABAÑAS LEON #241, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER.",
+    "email": "transportesmjm1@gmail.com",
+    "phone": ["2288442238"],
+    "web": null,
+    "bgColor": "#f0f8ff"
   }
 ]

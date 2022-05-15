@@ -80,13 +80,15 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
     try {
       const response = await window.fetch("./data/companies.json");
       const companies = await response.json();
+      companiesContainer.style.gridTemplateColumns = `repeat(${companies.length}, 85vw)`;
 
       companies.map(
         ({
           bgColor,
           description,
+          branches,
           email,
-          location,
+          addres,
           logos,
           name,
           phone,
@@ -94,10 +96,10 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
         }) => {
           companiesContainer.innerHTML += `
             <div 
-              class="w-full p-4 py-10 flex flex-col justify-start items-center bg-[${bgColor}] lg:grid lg:grid-cols-1 lg:grid-rows-[20%_30%_50%] lg:items-start"
+            class="w-full p-4 py-10 px-2 flex flex-col justify-start items-center bg-[${bgColor}] xl:grid xl:grid-cols-1 xl:grid-rows-[20%_30%_50%] xl:items-start"
               id="${name.toLowerCase().replace(/ /g, "-")}"
             >
-              <h4 class="my-4 text-2xl font-black text-[#267984] text-center lg:m-0">
+              <h4 class="my-4 text-3xl font-notoSans font-semibold text-[#267984] text-center xl:m-0">
                 ${name}
               </h4>
 
@@ -108,9 +110,9 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
               ${logos
                 .map(
                   (logo) => `
-              <div class="w-24 m-4 flex justify-center items-center lg:mt-0">
-                <img src="${logo}" alt="Logotipo de ${name}" class="w-full object-contain">
-              </div>
+                <div class="w-32 m-4 flex justify-center items-center xl:mt-0 xl:w-80">
+                  <img src="${logo}" alt="Logotipo de ${name}" class="w-full object-contain">
+                </div>
               `
                 )
                 .join("")}
@@ -118,17 +120,75 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
               }
               </div>
 
-              <p class="text-center">
+              <p class="text-center xl:max-w-2xl xl:mx-auto">
                 ${description}
               </p>
+
+                <div class="w-full mt-8 mb-4 flex justify-around items-center">
+                  ${
+                    phone.length > 0 &&
+                    `
+                    <div class="w-8">
+                        <a class="w-full" href="tel:${phone}" target="_blank" rel="noopener noreferrer">
+                          ${IconPhone()}
+                        </a>
+                    </div>
+                    `
+                  }
+                    ${
+                      email !== null &&
+                      `
+                        <div class="w-8">
+                          <a class="w-full" href="mailto:${email}" target="_blank" rel="noopener noreferrer">${IconMail()}</a>
+                        </div>
+                    `
+                    }
+                    ${
+                      addres !== "" &&
+                      `
+                        <div class="w-8">
+                          <a class="w-full" href="mailto:${email}" target="_blank" rel="noopener noreferrer">${IconLocation()}</a>
+                        </div>
+                    `
+                    }
+                </div>
+
+              ${
+                branches !== null &&
+                `
+               <div class="w-full mt-8 flex justify-start items-center overflow-x-scroll hideScroll"
+                style="max-width: 100vw;"
+               >
+                  <ul class="w-fit grid grid-rows-1 gap-4"
+                    style="grid-template-columns: repeat(${
+                      branches.length
+                    }, minmax(325px, 500px));"
+                    >
+                      ${branches
+                        .map(
+                          ({ name, addres }) => `
+                          <li class="w-full grid grid-cols-12">
+                            <div class="col-span-1 row-span-2 w-6 flex justify-center items-start">
+                            ${IconLocation()}
+                            </div>
+                            <p class="col-span-11 row-span-1 font-notoSans font-bold text-[#267984]">${name}</p>
+                            <p class="col-span-11 row-span-1 text-xs">${addres}</p>
+                          </li>
+                          `
+                        )
+                        .join("")}
+                  </ul>
+               </div>
+              `
+              }
             </div>
           `;
 
           companiesMenu.innerHTML += `
-            <li class="w-full my-4 lg:w-fit lg:mx-2">
+            <li class="w-full my-4 lg:w-fit lg:mx-0">
               <a
                 href="#${name.toLowerCase().replace(/ /g, "-")}"
-                class="w-full p-2 text-white text-3xl whitespace-nowrap capitalize hover:text-[#2BE8C0] outline-[#2BE8C0] transition-all duration-300 lg:text-lg"
+                class="w-full p-2 text-white text-[1.35rem] whitespace-nowrap capitalize hover:text-[#2BE8C0] outline-[#2BE8C0] transition-all duration-300 lg:p-1 lg:text-base"
               >
               ${name.toLowerCase().replace(/ s.a. de c.v./, "")}
               </a>
@@ -268,9 +328,11 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
   document.addEventListener("scroll", () => {
     const scroll = window.scrollY;
     if (scroll > 1000) {
-      buttonUp.classList.remove("hidden");
+      buttonUp.style.width = "3rem";
+      buttonUp.style.height = "3rem";
     } else {
-      buttonUp.classList.add("hidden");
+      buttonUp.style.width = "0";
+      buttonUp.style.height = "0";
     }
   });
 })();

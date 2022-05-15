@@ -6,6 +6,12 @@ module.exports = {
       colors: {
         "regal-blue": "#243c5a",
       },
+      fontFamily: {
+        notoSans: ["Noto Sans", "sans-serif"],
+      },
+      listStyleType: {
+        triangle: "disclosure-closed",
+      },
       // prettier-ignore
       backgroundImage: {
         "gradient-radial": "radial-gradient(50.35% 50% at 50% 50%, #145F68 18.23%, rgba(9, 37, 41, 0) 100%)",
