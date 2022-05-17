@@ -9,6 +9,10 @@ import IconPhone from "./svg/icon-phone.js";
 import IconLocation from "./svg/icon-location.js";
 import IconFacebook from "./svg/icon-facebook.js";
 import IconWhatsapp from "./svg/icon-whatsapp.js";
+import LocationMarker from "./svg/location-marker.js";
+import IconMailSolid from "./svg/icon-mail-solid.js";
+import IconPhoneSolid from "./svg/icon-phone-solid.js";
+import IconExternalLink from "./svg/icon-external-link.js";
 
 (function () {
   // Accede a elementos del DOM
@@ -80,6 +84,8 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
     try {
       const response = await window.fetch("./data/companies.json");
       const companies = await response.json();
+      const windowWidth = window.innerWidth;
+
       companiesContainer.style.gridTemplateColumns = `repeat(${companies.length}, 85vw)`;
 
       companies.map(
@@ -88,6 +94,7 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
           description,
           branches,
           email,
+          location,
           addres,
           logos,
           name,
@@ -96,10 +103,10 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
         }) => {
           companiesContainer.innerHTML += `
             <div 
-            class="w-full p-4 py-10 px-2 flex flex-col justify-start items-center bg-[${bgColor}] xl:grid xl:grid-cols-1 xl:grid-rows-[20%_30%_50%] xl:items-start"
+            class="w-full p-4 py-10 px-2 flex flex-col justify-start items-center bg-[${bgColor}]"
               id="${name.toLowerCase().replace(/ /g, "-")}"
             >
-              <h4 class="my-4 text-3xl font-notoSans font-semibold text-[#267984] text-center xl:m-0">
+              <h4 class="my-4 text-3xl font-notoSans font-semibold text-[#1C444C] text-center xl:m-0">
                 ${name}
               </h4>
 
@@ -124,56 +131,76 @@ import IconWhatsapp from "./svg/icon-whatsapp.js";
                 ${description}
               </p>
 
-                <div class="w-full mt-8 mb-4 flex justify-around items-center">
+                <div class="w-full max-w-md mt-8 mb-4 flex justify-around items-center">
+                ${
+                  addres !== ""
+                    ? `
+                    <div class="w-8">
+                      <a class="w-full" href="${
+                        location !== "" ? location : ""
+                      }" ${
+                        location !== ""
+                          ? `target="_blank" rel="noopener noreferrer"`
+                          : ""
+                      }>${LocationMarker()}</a>
+                    </div>
+                `
+                    : ""
+                }
+                ${
+                  email !== null
+                    ? `
+                    <div class="w-8">
+                      <a class="w-full" href="mailto:${email}" target="_blank" rel="noopener noreferrer">${IconMailSolid()}</a>
+                    </div>
+                `
+                    : ""
+                }
                   ${
-                    phone.length > 0 &&
-                    `
+                    phone.length > 0
+                      ? `
                     <div class="w-8">
                         <a class="w-full" href="tel:${phone}" target="_blank" rel="noopener noreferrer">
-                          ${IconPhone()}
+                          ${IconPhoneSolid()}
                         </a>
                     </div>
                     `
+                      : ""
                   }
-                    ${
-                      email !== null &&
-                      `
-                        <div class="w-8">
-                          <a class="w-full" href="mailto:${email}" target="_blank" rel="noopener noreferrer">${IconMail()}</a>
-                        </div>
+                  ${
+                    web !== null
+                      ? `
+                    <div class="w-8">
+                        <a class="w-full" href="${web}" target="_blank" rel="noopener noreferrer">
+                          ${IconExternalLink()}
+                        </a>
+                    </div>
                     `
-                    }
-                    ${
-                      addres !== "" &&
-                      `
-                        <div class="w-8">
-                          <a class="w-full" href="mailto:${email}" target="_blank" rel="noopener noreferrer">${IconLocation()}</a>
-                        </div>
-                    `
-                    }
+                      : ""
+                  }
                 </div>
 
               ${
                 branches !== null &&
                 `
-               <div class="w-full mt-8 flex justify-start items-center overflow-x-scroll hideScroll"
+               <div class="w-full mt-8 flex justify-start items-center overflow-x-scroll hideScroll xl:mt-0 xl:justify-center"
                 style="max-width: 100vw;"
                >
-                  <ul class="w-fit grid grid-rows-1 gap-4"
+                  <ul class="w-fit py-2 grid grid-rows-1 gap-4"
                     style="grid-template-columns: repeat(${
-                      branches.length
+                      windowWidth < 1280 ? branches.length : 3
                     }, minmax(325px, 500px));"
                     >
                       ${branches
                         .map(
-                          ({ name, addres }) => `
-                          <li class="w-full grid grid-cols-12">
+                          ({ name, addres, location }) => `
+                          <a class="w-full py-4 grid grid-cols-12 rounded-xl shadow-xl xl:py-8" href="${location}" target="_blank" rel="noopener noreferrer">
                             <div class="col-span-1 row-span-2 w-6 flex justify-center items-start">
                             ${IconLocation()}
                             </div>
-                            <p class="col-span-11 row-span-1 font-notoSans font-bold text-[#267984]">${name}</p>
+                            <p class="col-span-11 row-span-1 font-notoSans font-bold text-[#1C444C]">${name}</p>
                             <p class="col-span-11 row-span-1 text-xs">${addres}</p>
-                          </li>
+                          </a>
                           `
                         )
                         .join("")}

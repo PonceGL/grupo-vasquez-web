@@ -8,33 +8,41 @@
     "branches": [
       {
         "name": "SUCURSAL ALTO LUCERO",
-        "addres": "AV. CONGRESO #18, COL. CENTRO, C.P. 91460, ALTO LUCERO, VER."
+        "addres": "AV. CONGRESO #18, COL. CENTRO, C.P. 91460, ALTO LUCERO, VER.",
+        "location": "https://www.materialesvasquezhnos.com.mx/sucursales"
       },
       {
         "name": "SUCURSAL ATENAS",
-        "addres": "AV. ATENAS VERACRUZANA #1906, COL. REVOLUCIÓN, C.P. 91110, XALAPA, VER."
+        "addres": "AV. ATENAS VERACRUZANA #1906, COL. REVOLUCIÓN, C.P. 91110, XALAPA, VER.",
+        "location": "https://www.materialesvasquezhnos.com.mx/sucursales"
       },
       {
         "name": "SUCURSAL CASTILLO",
-        "addres": "CARRETERA XALAPA-CASTILLO #201, COL. LA TRANCA, C.P. 91165, XALAPA, VER."
+        "addres": "CARRETERA XALAPA-CASTILLO #201, COL. LA TRANCA, C.P. 91165, XALAPA, VER.",
+        "location": "https://www.materialesvasquezhnos.com.mx/sucursales"
       },
       {
         "name": "SUCURSAL BANDERILLA",
-        "addres": "CARRETERA NACIONAL XALAPA-BANDERILLA S/N KM. 2, COL. CENTRO, BANDERILLA, VER."
+        "addres": "CARRETERA NACIONAL XALAPA-BANDERILLA S/N KM. 2, COL. CENTRO, BANDERILLA, VER.",
+        "location": "https://www.materialesvasquezhnos.com.mx/sucursales"
       },
       {
         "name": "SUCURSAL MARGARITA OLIVO",
-        "addres": "CALLE MARGARITA OLIVO LARA #15, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER."
+        "addres": "CALLE MARGARITA OLIVO LARA #15, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER.",
+        "location": "https://www.materialesvasquezhnos.com.mx/sucursales"
       },
       {
         "name": "SUCURSAL LAZARO CARDENAS",
-        "addres": "AV. LAZARO CARDENAS #274. COL. ENCINAL, C.P. 91180, XALAPA, VER."
+        "addres": "AV. LAZARO CARDENAS #274. COL. ENCINAL, C.P. 91180, XALAPA, VER.",
+        "location": "https://www.materialesvasquezhnos.com.mx/sucursales"
       },
       {
         "name": "SUCURSAL HOME CENTER",
-        "addres": "AV. LAZARO CARDENAS #410, COL. BADILLO, C.P. 91180, XALAPA, VER."
+        "addres": "AV. LAZARO CARDENAS #410, COL. BADILLO, C.P. 91180, XALAPA, VER.",
+        "location": "https://www.materialesvasquezhnos.com.mx/sucursales"
       }
     ],
+    "location": "https://www.google.com/maps/place/Materiales+V%C3%A1squez+Hermanos/@19.5349113,-96.9078197,18z/data=!4m5!3m4!1s0x85db31f7ac629e8d:0x57895fc9dc242c36!8m2!3d19.5349554!4d-96.9076922?shorturl=1",
     "addres": "AV. LAZARO CARDENAS #274. COL. ENCINAL, C.P. 91180, XALAPA, VER.",
     "email": "contacto@vasquez.com",
     "phone": ["2288401919"],
@@ -48,6 +56,7 @@
     ],
     "description": "Especialización: Urbanización, Construcción Residencial, Movimiento de Tierras, Pavimentación concreto Asfaltico e Hidráulico, Líneas de Conducción de Agua, Tanques Elevados, Drenaje Sanitario, Drenaje Pluvial, Remodelación Casa Habitación, Mantenimiento Centros de Salud, Puentes",
     "branches": [],
+    "location": "https://www.google.com/maps/place/Materiales+V%C3%A1squez+Hermanos/@19.5590195,-96.9190621,18.46z/data=!4m5!3m4!1s0x85db31deef935727:0xf78c3ecd94c25373!8m2!3d19.5590387!4d-96.9175407?shorturl=1",
     "addres": "CALLE MARGARITA OLIVO LARA #15, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER.",
     "email": "contacto@vasquez.com",
     "phone": ["2282903272", "2282903273"],
@@ -61,6 +70,7 @@
     ],
     "description": "Contamos con un extenso patio de servicio en donde tenemos vigilancia y espacio suficiente para el resguardo de las unidades y de la carga que transportamos.",
     "branches": [],
+    "location": "https://www.google.com/maps/place/Materiales+V%C3%A1squez+Hermanos/@19.5590195,-96.9190621,18.46z/data=!4m5!3m4!1s0x85db31deef935727:0xf78c3ecd94c25373!8m2!3d19.5590387!4d-96.9175407?shorturl=1",
     "addres": "CALLE MARGARITA OLIVO LARA #15, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER.",
     "email": "contacto@vasquez.com",
     "phone": ["2281550849"],
@@ -74,6 +84,7 @@
     ],
     "description": "Elegancia, tecnología y comodidad.",
     "branches": [],
+    "location": "",
     "addres": "",
     "email": "contacto@vasquez.com",
     "phone": ["2288454545"],
@@ -87,6 +98,7 @@
     ],
     "description": "Servicios especializados de Transporte terrestre y Logística de mercancías, productos y maquinaria, con altos niveles de calidad y seguridad.",
     "branches": [],
+    "location": "https://www.google.com/maps/place/19%C2%B033'45.1%22N+96%C2%B055'37.2%22W/@19.562502,-96.9274534,19z/data=!4m5!3m4!1s0x0:0x1068849c3f367cff!8m2!3d19.5625172!4d-96.9269867?hl=es",
     "addres": "CALLE CIRILO CELIS PASTRANA #4, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER.",
     "email": "transportesmjm1@gmail.com",
     "phone": ["2281338418"],
@@ -100,6 +112,7 @@
     ],
     "description": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500",
     "branches": [],
+    "location": "https://www.google.com/maps/place/Herminio+Caba%C3%B1as+Le%C3%B3n+212B,+Rafael+Lucio,+91110+Xalapa-Enr%C3%ADquez,+Ver./@19.559794,-96.9153202,19z/data=!3m1!4b1!4m13!1m7!3m6!1s0x85db31dc3ca2347b:0x6f1ad9f9388887cb!2sHerminio+Caba%C3%B1as+Le%C3%B3n,+Rafael+Lucio,+Xalapa-Enr%C3%ADquez,+Ver.!3b1!8m2!3d19.5601447!4d-96.9147988!3m4!1s0x85db31dc3d6c8a49:0x8c014b883980cef2!8m2!3d19.559794!4d-96.9147669",
     "addres": "HERMINIO CABAÑAS LEON #241, COL. RAFAEL LUCIO, C.P. 91110, XALAPA, VER.",
     "email": "transportesmjm1@gmail.com",
     "phone": ["2288442238"],
