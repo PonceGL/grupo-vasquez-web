@@ -1,0 +1,6 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "@next/next/no-img-element": "off" // Desactiva la advertencia de imágenes NextImage
+  }
+}
