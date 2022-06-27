@@ -1,12 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import BackToTop from "../components/BackToTop";
-import Welcome from "../components/Welcome";
-import Submission from "../components/Submission";
-import Reasons from "../components/Reasons";
-import Companies from "../components/Companies";
-import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions";
-import Footer from "../components/Footer";
+import Welcome from "../components/Welcome/indes";
+
+// Components
+import Presentation from "../components/Presentation";
+import { SvgLines } from "../components/IconsSVG/Line";
 
 const Home: NextPage = () => {
   return (
@@ -17,13 +15,28 @@ const Home: NextPage = () => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <BackToTop />
       <Welcome />
-      <Submission />
-      <Reasons />
-      <Companies />
-      <FrequentlyAskedQuestions />
-      <Footer />
+      <Presentation />
+      <div className="fixed opacity-40 inset-0 z-[1]">
+        <SvgLines />
+      </div>
+      <section className="w-full h-screen">
+        <div data-scroll-container>
+          <div data-scroll-section>
+            <h1 data-scroll>Hey</h1>
+            <p data-scroll>👋</p>
+          </div>
+          <div data-scroll-section>
+            <h2 data-scroll data-scroll-speed="1">
+              What's up?
+            </h2>
+            <p data-scroll data-scroll-speed="2">
+              😬
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="w-full h-screen" />
     </>
   );
 };

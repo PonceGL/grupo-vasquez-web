@@ -2,62 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Aeonik-Regular";
+    src: local("Aeonik-Regular"),
+      url(../public/fonts/Aeonik/Aeonik-Regular.otf) format("opentype");
+  }
+  @font-face {
+    font-family: "Aeonik-Medium";
+    src: local("Aeonik-Medium"),
+      url(../public/fonts/Aeonik/Aeonik-Medium.otf) format("opentype");
+  }
+}
+
 html {
+  /* font-size: 62.5%; */
   scroll-behavior: smooth;
 }
 
 body {
+  /* font-size: 1.4rem; */
+  font-family: "Aeonik-Regular", Courier, monospace;
+}
+
+/* body > :first-child */
+body > :nth-child(3) {
   width: 100vw;
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100vw;
   grid-template-rows: auto 1fr auto;
+  position: relative;
   overflow-x: hidden;
 }
 
-.hideScroll ::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-}
-.hideScroll ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
-.horizontal-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.horizontal-container .slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-@media screen and (min-width: 1280px) {
-  .horizontal-container {
-    position: relative;
-    display: block;
-    width: 100vh;
-    height: 100vw;
-    overflow: scroll;
-    transform-origin: 100% 0%;
-    transform: rotate(-90deg) translateY(-100vh);
-    scroll-behavior: smooth;
-    /* background-color: cornflowerblue; */
-  }
-
-  .horizontal-container .slide {
-    width: 100vw;
-    height: 100vh;
-    /* height: calc(100vh - 2rem); */
-    display: grid;
-    align-items: stretch;
-    /* grid-gap: 10px; */
-    transform-origin: 0% 0%;
-    transform: rotate(90deg) translateY(-100%);
-    grid-template-columns: 1fr 1fr;
-  }
 }
