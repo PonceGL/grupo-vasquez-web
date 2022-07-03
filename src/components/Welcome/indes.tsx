@@ -1,8 +1,4 @@
 import React, { FC } from "react";
-import Image from "next/image";
-
-// Utils
-import { shimmer } from "../../utils/shimmer";
 
 // hooks
 import { useWindowScroll } from "../../hooks/useWindowScroll";
@@ -15,31 +11,38 @@ const Welcome: FC = () => {
 
   return (
     <section className="w-screen h-[80vh] relative overflow-hidden z-[1]">
-      <div className="w-full p-8 flex flex-col justify-center items-center text-admin-light text-[1rem] absolute inset-0 z-[3]">
-        <h2
+      <div className="w-full p-8 flex flex-col justify-end items-center absolute inset-0 z-[3]">
+        <div
           style={{
-            transform: `translateY(-${(scroll / 4).toFixed(2)}px)`,
+            transform: `translateY(-${(scroll / 3).toFixed(2)}px)`,
           }}
-          className={`text-left tracking-[-1.2px] text-neutral-200 text-6xl font-aeonik_medium transition-bezier duration-75`}
+          className="w-full h-[90%] flex flex-col justify-between items-start overflow-hidden transition-bezier duration-75"
         >
-          Creating
-          <br />
-          Spaces for
-          <br />a Lifetime
-        </h2>
-      </div>
+          <div className="w-full h-1/2 flex flex-col justify-end items-start overflow-hidden">
+            <h2 className="flex flex-col justify-start items-start text-left tracking-[-1.2px] text-neutral-200 text-5xl font-aeonik_medium">
+              <span className="translate-y-full animate-showTopText">
+                Ofrecemos soluciones a tu medida en
+              </span>
+            </h2>
+          </div>
+          <div className="w-full h-1 bg-neutral-200 -translate-x-full animate-entryDivider" />
 
-      <div className="bg-[#003845] bg-opacity-70 absolute inset-0 z-[2]" />
+          <div className="w-full h-1/2 flex flex-col justify-start items-start overflow-hidden">
+            <h2 className="flex flex-col justify-start items-start text-left tracking-[-1.2px] text-neutral-200 text-5xl font-aeonik_medium">
+              <span className="-translate-y-full animate-showBottomText">
+                nuestras distintas divisiones
+              </span>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div className="bg-regal-blue bg-opacity-80 absolute inset-0 z-[2]" />
 
       <div className="w-full h-full relative z-[0]">
-        <Image
+        <img
           src={imageUrl}
           alt={`Imagen Grupo Vasquez`}
-          layout="fill"
-          objectFit="cover"
-          placeholder="blur"
-          blurDataURL={shimmer()}
-          priority
+          className="w-full h-full object-cover"
         />
       </div>
     </section>

@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Welcome from "../components/Welcome/indes";
 
 // Components
+import Welcome from "../components/Welcome/indes";
 import Presentation from "../components/Presentation";
 import { SvgLines } from "../components/IconsSVG/Line";
 
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       </Head>
       <Welcome />
       <Presentation />
-      <div className="fixed opacity-40 inset-0 z-[1]">
+      <div className="w-full fixed opacity-40 top-0 left-0 z-[1]">
         <SvgLines />
       </div>
       <section className="w-full h-screen">
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           </div>
           <div data-scroll-section>
             <h2 data-scroll data-scroll-speed="1">
-              What's up?
+              What&apos;s up?
             </h2>
             <p data-scroll data-scroll-speed="2">
               😬

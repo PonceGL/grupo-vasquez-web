@@ -11,11 +11,12 @@ const FirstText: FC = () => {
       style={{
         transform: `translateY(-${(scroll / 8).toFixed(2)}px)`,
       }}
-      className="text-neutral-300 text-lg leading-7 transition-bezier duration-150"
+      className="p-8 text-neutral-300 text-xl leading-7 transition-bezier duration-150"
     >
-      For over fifty years, DFDG Architecture has been enhancing the way people
-      experience architecture and interior spaces. We thrive on breaking
-      barriers and developing simple solutions to complex challenges.
+      Con 24 años de experiencia en la compra-venta de Material para
+      Construcción de Obra Negra, Acabados, Iluminación, manejando los mejores
+      productos del país, logrando distribuir a todo el estado de Veracruz. Con
+      los mejores Productos de los Mejores Proveedores.
     </p>
   );
 };

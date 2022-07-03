@@ -1,5 +1,6 @@
-import React, { FC, useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React, { FC } from "react";
+// import React, { FC, useState, useEffect } from "react";
+// import { useRouter } from "next/router";
 import Link from "next/link";
 
 // Components
@@ -9,12 +10,12 @@ import { MenuAlt4Icon } from "@heroicons/react/outline";
 // import DesktopMenu from "../MainMenu/DesktopMenu";
 
 const Header: FC = () => {
-  const router = useRouter();
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  // const router = useRouter();
+  // const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-  useEffect(() => {
-    setMenuIsOpen(false);
-  }, [router]);
+  // useEffect(() => {
+  //   setMenuIsOpen(false);
+  // }, [router]);
 
   return (
     <header className={`p-8 absolute top-0 left-0 right-0 z-10`} id="header">
@@ -29,7 +30,8 @@ const Header: FC = () => {
         <button
           className="h-14 w-14 flex justify-center items-center rounded-md focus:outline-none focus:ring-1 focus:ring-inset focus:ring-admin-primary lg:hidden"
           aria-label="Button for opening the menu"
-          onClick={() => setMenuIsOpen(true)}
+          // onClick={() => setMenuIsOpen(true)}
+          onClick={() => console.log(true)}
         >
           <span className="sr-only">Open menu</span>
           <MenuAlt4Icon
