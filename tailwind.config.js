@@ -1,8 +1,5 @@
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       // prettier-ignore
@@ -93,6 +90,15 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        ripples: {
+          "0%": {
+            transform: "scale(0)",
+          },
+          "100%": {
+            transform: "scale(4)",
+            opacity: "0",
+          },
+        },
       },
       listStyleType: {
         triangle: "disclosure-closed",
@@ -122,6 +128,7 @@ module.exports = {
         fadeInLeft: "fadeInLeft 1s ease-in 0s 1 normal forwards;",
         fadeInRight: "fadeInRight 1s ease-in 0s 1 normal forwards;",
         fadeInBottom: "fadeInBottom 1s ease-in 0s 1 normal forwards",
+        ripples: "ripples 1s linear forwards",
       },
     },
   },

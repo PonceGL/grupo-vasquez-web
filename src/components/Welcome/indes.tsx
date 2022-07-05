@@ -14,7 +14,7 @@ const Welcome: FC = () => {
       <div className="w-full p-8 flex flex-col justify-end items-center absolute inset-0 z-[3]">
         <div
           style={{
-            transform: `translateY(-${(scroll / 3).toFixed(2)}px)`,
+            transform: `translateY(-${(scroll / 2).toFixed(2)}px)`,
           }}
           className="w-full h-[90%] flex flex-col justify-between items-start overflow-hidden transition-bezier duration-75"
         >
@@ -36,8 +36,8 @@ const Welcome: FC = () => {
           </div>
         </div>
       </div>
-      <div className="bg-regal-blue bg-opacity-80 absolute inset-0 z-[2]" />
-
+      {/* bg-regal-blue */}
+      <div className="bg-regal-blue bg-opacity-60 absolute inset-0 z-[2]" />
       <div className="w-full h-full relative z-[0]">
         <img
           src={imageUrl}

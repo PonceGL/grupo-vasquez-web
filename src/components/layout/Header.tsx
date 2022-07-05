@@ -4,7 +4,7 @@ import React, { FC } from "react";
 import Link from "next/link";
 
 // Components
-// import { Logo } from "../../../common/SVGs/Logo";
+import LogoGrupo from "../../public/assets/logos/grupo-vasquez.png";
 import { MenuAlt4Icon } from "@heroicons/react/outline";
 // import MobileMenu from "../MainMenu/MobileMenu";
 // import DesktopMenu from "../MainMenu/DesktopMenu";
@@ -21,9 +21,14 @@ const Header: FC = () => {
     <header className={`p-8 absolute top-0 left-0 right-0 z-10`} id="header">
       <div className="w-full flex justify-between items-center relative">
         <Link href="/">
-          <a className={`flex justify-center items-center md:w-1/3 lg:w-80`}>
-            Logo
-            {/* <Logo color="#222222" /> */}
+          <a
+            className={`w-32 flex justify-center items-center md:w-1/3 lg:w-80`}
+          >
+            <img
+              src={LogoGrupo.src}
+              alt="Logotipo de GRUPO EMPRESARIAL VÁSQUEZ"
+              className="w-full mx-auto"
+            />
           </a>
         </Link>
 
