@@ -99,6 +99,16 @@ module.exports = {
             opacity: "0",
           },
         },
+        slideLine: {
+          "0%": {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(100vw)",
+          },
+        },
       },
       listStyleType: {
         triangle: "disclosure-closed",
@@ -129,6 +139,7 @@ module.exports = {
         fadeInRight: "fadeInRight 1s ease-in 0s 1 normal forwards;",
         fadeInBottom: "fadeInBottom 1s ease-in 0s 1 normal forwards",
         ripples: "ripples 1s linear forwards",
+        slideLine: "slideLine 1s linear 0.5s 1 normal none",
       },
     },
   },

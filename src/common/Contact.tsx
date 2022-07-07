@@ -67,6 +67,10 @@ const Contact: FC<Props> = ({
         className={`h-4 w-4 ml-2 stroke-blue-900 hidden`}
         aria-hidden="true"
       />
+      <ExternalLinkIcon
+        className={`h-4 w-4 ml-2 stroke-[#005490] hidden`}
+        aria-hidden="true"
+      />
     </>
   );
 };

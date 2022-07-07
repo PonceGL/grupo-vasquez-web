@@ -10,7 +10,7 @@ import Contact from "../../common/Contact";
 const Constructora: FC = () => {
   return (
     <section
-      className="w-full pt-16 bg-neutral-100 z-[1] relative overflow-hidden"
+      className="w-full pt-16 pb-40 bg-neutral-100 z-[1] relative overflow-hidden"
       id="Constructora"
     >
       <Logotipos />

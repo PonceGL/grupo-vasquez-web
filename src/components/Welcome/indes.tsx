@@ -16,7 +16,7 @@ const Welcome: FC = () => {
           style={{
             transform: `translateY(-${(scroll / 2).toFixed(2)}px)`,
           }}
-          className="w-full h-[90%] flex flex-col justify-between items-start overflow-hidden transition-bezier duration-75"
+          className="w-full h-[80%] flex flex-col justify-between items-start overflow-hidden"
         >
           <div className="w-full h-1/2 flex flex-col justify-end items-start overflow-hidden">
             <h2 className="flex flex-col justify-start items-start text-left tracking-[-1.2px] text-neutral-200 text-5xl font-aeonik_medium">
@@ -36,8 +36,8 @@ const Welcome: FC = () => {
           </div>
         </div>
       </div>
-      {/* bg-regal-blue */}
-      <div className="bg-regal-blue bg-opacity-60 absolute inset-0 z-[2]" />
+      {/* <div className="w-screen h-80 fixed top-0 left-0 z-[2] branch-svg-lines" /> */}
+      <div className="bg-regal-blue bg-opacity-60 absolute inset-0 z-[1]" />
       <div className="w-full h-full relative z-[0]">
         <img
           src={imageUrl}

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "static": "next build && next export && touch ./out/.nojekyll && echo 'https://poncegl.github.io/grupo-vasquez-web' > ./out/CNAME",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint src/ --fix"

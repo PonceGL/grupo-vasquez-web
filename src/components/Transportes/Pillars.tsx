@@ -10,7 +10,7 @@ const Pillars: FC = () => {
   return (
     <div
       ref={element}
-      className="w-full my-6 flex justify-between items-center"
+      className="w-full mb-6 px-4 flex justify-between items-center"
     >
       <p
         style={

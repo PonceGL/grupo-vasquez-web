@@ -6,7 +6,7 @@ import LogoTransportesGrupo from "../../public/assets/logos/trasnportes-grupo-va
 
 const Logotipos: FC = () => {
   return (
-    <div className="w-full py-4 grid grid-cols-2 grid-rows-2 gap-0 place-items-center bg-zinc-200 absolute left-0">
+    <div className="w-full py-4 grid grid-cols-2 grid-rows-2 gap-0 place-items-center bg-zinc-200">
       <img
         src={LogoTransportesTira.src}
         alt="Logotipo de TRANSPORTES VASQUEZ SA de CV"

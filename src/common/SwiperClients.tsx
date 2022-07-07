@@ -62,7 +62,7 @@ const SwiperClients: FC = () => {
       <Swiper
         slidesPerView={3}
         spaceBetween={20}
-        // freeMode={true}
+        freeMode={true}
         keyboard={{
           enabled: true,
         }}

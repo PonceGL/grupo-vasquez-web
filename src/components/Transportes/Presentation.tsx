@@ -27,7 +27,7 @@ const Presentation: FC = () => {
   }, [isOnScreen, scroll]);
 
   return (
-    <div className="w-full h-72">
+    <div className="w-full h-72 p-8">
       <h2
         style={
           isOnScreen
@@ -37,7 +37,7 @@ const Presentation: FC = () => {
             : {}
         }
         ref={element}
-        className={`text-right tracking-[-1.2px] text-neutral-200 text-3xl font-aeonik_medium relative z-[1] transition-bezier duration-100`}
+        className={`text-right tracking-[-1.2px] text-neutral-200 text-3xl font-aeonik_medium relative z-[1]`}
       >
         TRANSPORTES VASQUEZ <br /> SA DE CV
       </h2>

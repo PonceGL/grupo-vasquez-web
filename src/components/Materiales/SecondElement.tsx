@@ -14,7 +14,7 @@ const imageUrl =
 
 const SecondElement: FC<Props> = ({ refElement, isOnScreen }) => {
   return (
-    <div className="w-full min-h-[95vh] mb-24 p-2 pb-0 flex flex-col justify-start items-start relative border-[1px] border-sky-800 border-opacity-40">
+    <div className="w-full min-h-screen mb-24 p-2 pb-0 flex flex-col justify-start items-start relative border-[1px] border-sky-800 border-opacity-40">
       <h2
         ref={refElement}
         className={`text-left tracking-[-1.2px] text-sky-800 text-4xl font-aeonik_medium translate-y-4 relative z-[1] opacity-0 ${
