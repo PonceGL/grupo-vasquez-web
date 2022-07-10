@@ -41,7 +41,7 @@ const Contact: FC<Props> = ({
         {!!web && (
           <div className="w-full mt-4 flex justify-start items-center">
             <a
-              className={`tracking-[1.2px] ${textColor} text-left text-base font-aeonik_medium cursor-pointer`}
+              className={`tracking-[1.2px] ${textColor} text-left text-base font-aeonik_medium cursor-pointer truncate`}
               href={`https://${web}/`}
               target="_blank"
               rel="noopener noreferrer"
@@ -69,6 +69,10 @@ const Contact: FC<Props> = ({
       />
       <ExternalLinkIcon
         className={`h-4 w-4 ml-2 stroke-[#005490] hidden`}
+        aria-hidden="true"
+      />
+      <ExternalLinkIcon
+        className={`h-4 w-4 ml-2 stroke-white hidden`}
         aria-hidden="true"
       />
     </>

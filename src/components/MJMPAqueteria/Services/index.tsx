@@ -14,7 +14,7 @@ const Services: FC = () => {
       />
       <Service
         icon="icon-formas_de_pago -rotate-12"
-        translate="translate-x-20"
+        translate="translate-x-16"
         message="Diferentes formas de pago"
         animate="animate-fadeInRight"
       />

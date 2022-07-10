@@ -1,24 +1,20 @@
-import React, { FC } from "react";
-// import React, { FC, useState, useEffect } from "react";
-// import { useRouter } from "next/router";
+import React, { FC, useState } from "react";
 import Link from "next/link";
 
 // Components
 import LogoGrupo from "../../public/assets/logos/grupo-vasquez.png";
 import { MenuAlt4Icon } from "@heroicons/react/outline";
-// import MobileMenu from "../MainMenu/MobileMenu";
+import MobileMenu from "./Menu/MobileMenu";
 // import DesktopMenu from "../MainMenu/DesktopMenu";
 
 const Header: FC = () => {
-  // const router = useRouter();
-  // const [menuIsOpen, setMenuIsOpen] = useState(false);
-
-  // useEffect(() => {
-  //   setMenuIsOpen(false);
-  // }, [router]);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
-    <header className={`p-8 absolute top-0 left-0 right-0 z-10`} id="header">
+    <header
+      className={`w-full p-8 pb-0 absolute top-0 left-0 right-0 z-10`}
+      id="header"
+    >
       <div className="w-full flex justify-between items-center relative">
         <Link href="/">
           <a
@@ -35,10 +31,8 @@ const Header: FC = () => {
         <button
           className="h-14 w-14 flex justify-center items-center rounded-md focus:outline-none focus:ring-1 focus:ring-inset focus:ring-admin-primary lg:hidden"
           aria-label="Button for opening the menu"
-          // onClick={() => setMenuIsOpen(true)}
-          onClick={() => console.log(true)}
+          onClick={() => setMenuIsOpen(true)}
         >
-          <span className="sr-only">Open menu</span>
           <MenuAlt4Icon
             className={`h-14 w-14 stroke-neutral-300`}
             aria-hidden="true"
@@ -48,6 +42,7 @@ const Header: FC = () => {
         {/* Desktop Menu */}
       </div>
       {/* Mobile menu */}
+      <MobileMenu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
     </header>
   );
 };

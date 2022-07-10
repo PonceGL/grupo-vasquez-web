@@ -4,14 +4,16 @@ import Head from "next/head";
 
 // hooks
 // import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import favicon from "../public/assets/logos/icon_grupo.ico";
 
 // Components
-import Welcome from "../components/Welcome/indes";
+import Welcome from "../components/Welcome";
 import Materiales from "../components/Materiales";
 import Transportes from "../components/Transportes";
 import Constructora from "../components/Constructora";
 import HydeSalon from "../components/HydeSalon";
 import MJMPAqueteria from "../components/MJMPAqueteria";
+import Refacciones from "../components/Refacciones";
 
 const Home: NextPage = () => {
   const element = useRef<HTMLImageElement>(null);
@@ -41,10 +43,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Grupo Vaquez</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={favicon.src} />
       </Head>
       <Welcome />
       <Materiales />
@@ -52,6 +53,7 @@ const Home: NextPage = () => {
       <Constructora />
       <HydeSalon isOnScreen={isOnScreen} />
       <MJMPAqueteria refElement={element} />
+      <Refacciones />
     </>
   );
 };

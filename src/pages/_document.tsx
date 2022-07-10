@@ -11,11 +11,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"
           />
-          {/* <link
-            rel="icon"
-            href="https://www.roaguirre.com/wp-content/uploads/2020/08/Logo-RO-final-07-300x300.png"
-            sizes="192x192"
-          /> */}
         </Head>
         <body>
           <div id="modal-root" />

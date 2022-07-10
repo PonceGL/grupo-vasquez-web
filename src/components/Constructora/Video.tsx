@@ -70,7 +70,7 @@ const Video: FC = () => {
         <h2
           className={`text-center tracking-[-1.2px] text-neutral-200 text-3xl font-aeonik_medium relative z-[2] -translate-y-14 transition-bezier duration-100`}
         >
-          CONTRUCTORA E INMOBILIARIA VASQUEZ
+          CONSTRUCTORA E INMOBILIARIA VASQUEZ
         </h2>
         {/* <button
           className="h-5 w-5 flex justify-center items-center rounded-md focus:outline-none absolute bottom-1 right-1"

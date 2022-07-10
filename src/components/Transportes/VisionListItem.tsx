@@ -25,7 +25,7 @@ const VisionListItem: FC<Props> = ({ text }) => {
       >
         <strong>{text.split(":")[0]}:</strong> {text.split(":")[1]}
         <span
-          className={`w-full h-[2px] bg-neutral-200 rounded-sm absolute bottom-0 left-0 -translate-x-[150vw] ${
+          className={`w-full h-[1px] bg-neutral-200 bg-opacity-30 rounded-sm absolute bottom-0 left-0 -translate-x-[150vw] ${
             isOnScreen && "animate-slideLine"
           }`}
         />
