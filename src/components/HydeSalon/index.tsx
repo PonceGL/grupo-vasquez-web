@@ -1,17 +1,19 @@
-import React, { FC } from "react";
+import React, { FC, RefObject } from "react";
 
 // Components
 import Presentation from "./Presentation";
 import SwiperHydeSalon from "../../common/SwiperHydeSalon";
 
 interface Props {
+  refSection: RefObject<HTMLElement>;
   isOnScreen: boolean;
 }
 
-const HydeSalon: FC<Props> = ({ isOnScreen }) => {
+const HydeSalon: FC<Props> = ({ isOnScreen, refSection }) => {
   return (
     <section
-      className={`w-full pb-24 bg-neutral-100 relative overflow-hidden`}
+      ref={refSection}
+      className={`w-full max-w-screen-2xl pb-24 bg-neutral-100 relative overflow-hidden z-[1]`}
       id="HydeSalon"
     >
       <Presentation />

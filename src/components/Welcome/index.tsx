@@ -13,25 +13,25 @@ const Welcome: FC = () => {
   const [scroll] = useWindowScroll();
 
   return (
-    <section className="w-screen h-screen relative overflow-hidden z-[1]">
-      <div className="w-full flex flex-col justify-end items-center absolute inset-0 z-[3]">
+    <section className="w-full max-w-screen-2xl h-screen relative overflow-hidden z-[1]">
+      <div className="w-full flex flex-col justify-end items-center absolute inset-0 z-[3] lg:items-end">
         <div
           style={{
             transform: `translateY(-${(scroll / 2).toFixed(2)}px)`,
           }}
-          className="w-full h-[45vh] p-4 flex flex-col justify-between items-start overflow-hidden container-welcome-text"
+          className="w-full h-[40vh] p-4 flex flex-col justify-end items-start overflow-hidden container-welcome-text md:w-3/5 md:h-[50vh] md:p-0 lg:w-1/2"
         >
-          <div className="w-full h-1/2 flex flex-col justify-end items-start overflow-hidden">
-            <h2 className="flex flex-col justify-start items-start text-left tracking-[-1.2px] text-neutral-200 welcome-text font-aeonik_medium">
+          <div className="w-full h-3/5 flex flex-col justify-end items-start overflow-hidden">
+            <h2 className="flex flex-col justify-start items-start text-left tracking-[-1.2px] text-neutral-50 welcome-text font-aeonik_medium">
               <span className="translate-y-full animate-showTopText">
                 Ofrecemos soluciones a tu medida en
               </span>
             </h2>
           </div>
-          <div className="w-full h-1 bg-neutral-200 -translate-x-full animate-entryDivider" />
+          <span className="w-full h-1 bg-neutral-50 -translate-x-full animate-entryDivider" />
 
-          <div className="w-full h-1/2 flex flex-col justify-start items-start overflow-hidden">
-            <h2 className="flex flex-col justify-start items-start text-left tracking-[-1.2px] text-neutral-200 welcome-text font-aeonik_medium">
+          <div className="w-full h-2/5 flex flex-col justify-start items-start overflow-hidden">
+            <h2 className="flex flex-col justify-start items-start text-left tracking-[-1.2px] text-neutral-50 welcome-text font-aeonik_medium">
               <span className="-translate-y-full animate-showBottomText">
                 nuestras distintas divisiones
               </span>
@@ -40,8 +40,8 @@ const Welcome: FC = () => {
         </div>
         <LogoContainer />
       </div>
-      {/* <div className="w-screen h-80 fixed top-0 left-0 z-[2] branch-svg-lines" /> */}
-      <div className="bg-regal-blue bg-opacity-60 absolute inset-0 z-[1]" />
+      <div className="w-full max-w-screen-2xl h-screen fixed top-0 z-[2] branch-svg-lines" />
+      <div className="bg-blue-900 bg-opacity-30 absolute inset-0 z-[1] lg:bg-opacity-40" />
       <div className="w-full h-full relative z-[0]">
         <img
           src={imageUrl}

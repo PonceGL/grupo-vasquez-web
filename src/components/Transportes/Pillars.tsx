@@ -10,7 +10,7 @@ const Pillars: FC = () => {
   return (
     <div
       ref={element}
-      className="w-full mb-6 px-4 flex justify-between items-center"
+      className="w-full my-8 px-4 flex justify-between items-center md:my-12 md:justify-around"
     >
       <p
         style={
@@ -22,7 +22,7 @@ const Pillars: FC = () => {
         }
         className={`w-fit font-sans text-neutral-200 text-lg opacity-0 ${
           isOnScreen && "animate-fadeInRight"
-        }`}
+        } md:mx-4 md:text-3xl md:font-light`}
       >
         <strong>SERVICIO</strong>
       </p>
@@ -36,7 +36,7 @@ const Pillars: FC = () => {
         }
         className={`w-fit font-sans text-neutral-200 text-lg opacity-0 ${
           isOnScreen && "animate-fadeInRight"
-        }`}
+        } md:mx-4 md:text-3xl md:font-light`}
       >
         <strong>EXPERIENCIA</strong>
       </p>
@@ -50,7 +50,7 @@ const Pillars: FC = () => {
         }
         className={`w-fit font-sans text-neutral-200 text-lg opacity-0 ${
           isOnScreen && "animate-fadeInRight"
-        }`}
+        } md:mx-4 md:text-3xl md:font-light`}
       >
         <strong>SEGURIDAD</strong>
       </p>

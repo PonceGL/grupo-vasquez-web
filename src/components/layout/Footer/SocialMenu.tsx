@@ -7,7 +7,7 @@ import { WhatsAppIcon } from "../../../common/SVG/WhatsAppIcon";
 
 const SocialMenu: FC = () => {
   return (
-    <ul className="w-full p-8 flex justify-around items-center bg-white shadow-2xl">
+    <ul className="w-full p-8 flex justify-around items-center bg-white shadow-2xl relative z-[1] lg:w-auto lg:h-[500px] lg:flex-col">
       <li className="w-9 h-9 flex justify-center items-center bg-sky-800 rounded-full">
         {/* target="_blank" rel="noopener noreferrer" */}
         <a href="#">
@@ -18,7 +18,11 @@ const SocialMenu: FC = () => {
         </a>
       </li>
       <li className="w-9 h-9 flex justify-center items-center bg-sky-800 rounded-full">
-        <a href="#">
+        <a
+          href="https://www.facebook.com/empresarialvasquez"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FacebookIcon />
         </a>
       </li>

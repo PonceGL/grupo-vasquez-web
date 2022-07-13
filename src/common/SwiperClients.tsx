@@ -1,4 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
+
+// Hooks
+import { useWindowWidth } from "../hooks/useWindowWidth";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -46,6 +49,9 @@ const imagesList = [
 ];
 
 const SwiperClients: FC = () => {
+  const width = useWindowWidth();
+  const [slidesNumber, setSlidesNumber] = useState<number>(3);
+
   // String(index + 1)
   const pagination = {
     clickable: true,
@@ -54,13 +60,21 @@ const SwiperClients: FC = () => {
     },
   };
 
+  useEffect(() => {
+    // console.log("width => ", width);
+
+    if (width > 750) {
+      setSlidesNumber(4);
+    }
+  }, [width]);
+
   return (
     <div
       className="w-full mt-16 flex justify-center items-center bg-white"
       id="SwiperClients"
     >
       <Swiper
-        slidesPerView={3}
+        slidesPerView={slidesNumber}
         spaceBetween={20}
         freeMode={true}
         keyboard={{

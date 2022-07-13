@@ -15,12 +15,16 @@ const Service: FC<Props> = ({ icon, translate, message, animate }) => {
   const isOnScreen = useIntersectionObserver(element);
 
   return (
-    <div className={`flex flex-col justify-start items-center ${translate}`}>
+    <div
+      className={`w-full flex flex-col justify-start items-center ${translate} lg:justify-around`}
+    >
       <div
         ref={element}
-        className={`w-28 h-28 ${icon} opacity-0 ${isOnScreen && animate}`}
+        className={`w-28 h-28 ${icon} opacity-0 ${
+          isOnScreen && animate
+        } lg:w-20 lg:h-20`}
       />
-      <p className="w-full py-2 text-center text-[#005490] font-sans font-semibold text-lg">
+      <p className="w-full py-2 text-center text-[#005490] font-sans font-semibold text-lg lg:mx-4">
         {message}
       </p>
     </div>

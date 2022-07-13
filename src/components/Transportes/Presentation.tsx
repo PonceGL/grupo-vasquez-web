@@ -27,7 +27,7 @@ const Presentation: FC = () => {
   }, [isOnScreen, scroll]);
 
   return (
-    <div className="w-full h-72 p-8">
+    <div className="w-full">
       <h2
         style={
           isOnScreen
@@ -37,14 +37,14 @@ const Presentation: FC = () => {
             : {}
         }
         ref={element}
-        className={`text-right tracking-[-1.2px] text-neutral-200 text-3xl font-aeonik_medium relative z-[1]`}
+        className={`w-full p-6 text-right tracking-[-1.2px] text-neutral-200 text-3xl font-aeonik_medium absolute z-[1] lg:right-0`}
       >
         TRANSPORTES VASQUEZ <br /> SA DE CV
       </h2>
       <img
         src={BgTrasnportes.src}
         alt="Fotografia de caminoes de TRANSPORTES VASQUEZ"
-        className="w-full absolute top-40 left-0 z-0 opacity-80"
+        className="w-full relative z-0 opacity-80"
       />
     </div>
   );

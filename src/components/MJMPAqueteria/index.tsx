@@ -13,7 +13,7 @@ interface Props {
 const MJMPAqueteria: FC<Props> = ({ refElement }) => {
   return (
     <section
-      className="w-full min-h-screen bg-neutral-100 z-[1] relative overflow-hidden bg-gradient-to-t from-orange-400 via-orange-400  to-neutral-100"
+      className="w-full max-w-screen-2xl min-h-screen bg-neutral-100 z-[1] relative overflow-hidden bg-gradient-to-t from-orange-400 via-orange-400  to-neutral-100 lg:pl-[25%] xl:min-h-[70vh]"
       id="MJMPAqueteria"
     >
       <Presentation refElement={refElement} />

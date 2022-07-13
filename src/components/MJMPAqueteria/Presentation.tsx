@@ -22,7 +22,7 @@ const Presentation: FC<Props> = ({ refElement }) => {
         alt="Logotipo de Transportes MJM"
         className={`w-full mb-8 opacity-0 ${
           isOnScreen && "animate-fadeInBottom"
-        }`}
+        } md:w-1/2 md:mx-auto`}
       />
     </div>
   );

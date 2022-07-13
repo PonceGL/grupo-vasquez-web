@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 const Specialities: FC = () => {
   return (
-    <div className="mt-8 p-8">
+    <div className="w-full mt-8 p-8 lg:pl-[50%]">
       <h4 className="mt-4 font-sans font-semibold text-xl">
         SOMOS ESPECIALISTAS EN:
       </h4>

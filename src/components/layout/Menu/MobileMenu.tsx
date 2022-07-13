@@ -60,9 +60,9 @@ const MobileMenu: FC<Props> = ({ menuIsOpen, setMenuIsOpen }) => {
     <div
       className={`${
         menuIsOpen ? "right-0 opacity-100" : "-right-full opacity-0"
-      } w-screen flex justify-end items-start fixed top-0 z-[999] transition-all duration-500 ease-in-out lg:hidden`}
+      } w-screen flex justify-end items-start fixed top-0 z-[999] transition-all duration-500 ease-in-out lg:hidden md:bg-slate-800 md:bg-opacity-25`}
     >
-      <div className="w-full h-screen menu-movile bg-regal-blue shadow-main relative z-20 md:w-1/2">
+      <div className="w-full h-screen menu-movile bg-regal-blue relative z-20 md:w-3/5 md:shadow-2xl">
         <div className="w-full flex justify-between items-center relative z-[1]">
           <div className="w-32 flex justify-center items-center opacity-0">
             <img
@@ -115,7 +115,11 @@ const MobileMenu: FC<Props> = ({ menuIsOpen, setMenuIsOpen }) => {
               </a>
             </li>
             <li className="w-9 h-9 flex justify-center items-center border border-neutral-200 rounded-full">
-              <a href="#">
+              <a
+                href="https://www.facebook.com/empresarialvasquez"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FacebookIcon />
               </a>
             </li>
@@ -126,8 +130,9 @@ const MobileMenu: FC<Props> = ({ menuIsOpen, setMenuIsOpen }) => {
             </li>
           </ul>
         </nav>
-        <div className="w-[150vw] h-[70vh] blobs-lines-bg absolute left-0 -bottom-[40vh] z-[0]" />
+        <div className="w-[150vw] h-[70vh] blobs-lines-bg absolute left-0 -bottom-[40vh] z-[0] md:h-full" />
       </div>
+      <div className="w-screen backdrop-blur-sm absolute inset-0 z-10 transition-all duration-300 ease-in-out" />
     </div>
   );
 };

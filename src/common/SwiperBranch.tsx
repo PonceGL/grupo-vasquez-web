@@ -1,19 +1,16 @@
-import React, { FC } from "react";
+import React, { FC, useRef, useEffect, useState } from "react";
 
 // Components
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { Mousewheel, Keyboard, Navigation, Pagination } from "swiper";
+import { Keyboard, Navigation, Pagination } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-
-// Interface's
-// import { GalleryImage } from "../../interfaces/galleries";
-// interface Props {}
+// import "swiper/css/pagination";
 
 const imagesList = [
   {
@@ -76,8 +73,11 @@ const SwiperBranch: FC = () => {
   };
 
   return (
-    <div className="w-full flex justify-center items-center">
-      <div className="w-[90%] ml-auto flex justify-center items-center">
+    <div className="w-full flex justify-center items-center overflow-hidden">
+      <div
+        className="w-[90%] ml-auto flex justify-center items-center md:w-[80%] lg:w-full lg:ml-0"
+        id="SwiperBranch"
+      >
         <Swiper
           slidesPerView={"auto"}
           spaceBetween={20}
@@ -86,7 +86,7 @@ const SwiperBranch: FC = () => {
           }}
           loop={false}
           pagination={pagination}
-          modules={[Mousewheel, Keyboard, Navigation, Pagination]}
+          modules={[Keyboard, Navigation, Pagination]}
           className="mySwiper"
         >
           {imagesList.map(({ url, alt, name, address }) => (
@@ -97,13 +97,16 @@ const SwiperBranch: FC = () => {
                 >
                   {name.toLocaleLowerCase()}
                 </h4>
-                <div className="h-96">
+                <div className="h-96 md:h-[35rem]">
                   <img
                     src={url}
                     alt={alt}
                     className="w-full h-full object-cover shadow-xl"
                   />
                 </div>
+                {/* <p className="flex justify-start items-center text-[#075985] text-[30px] leading-[34px] font-[300] text-left font-notoSans">
+                  custom
+                </p> */}
               </>
             </SwiperSlide>
           ))}

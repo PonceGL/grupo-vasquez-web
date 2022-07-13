@@ -1,6 +1,7 @@
 import React, {
   FC,
   useRef,
+  useEffect,
   useState,
   FormEvent,
   Dispatch,
@@ -13,6 +14,7 @@ interface Props {
 }
 
 const Form: FC<Props> = ({ closeLoading }) => {
+  const formRef = useRef<HTMLFormElement>(null);
   const inputFileRef = useRef<HTMLInputElement>(null);
   const [archivos, setArchivos] = useState<FileList | null>(null);
   const [nameForm, setNameForm] = useState<string>("");
@@ -21,18 +23,55 @@ const Form: FC<Props> = ({ closeLoading }) => {
   const [messageForm, setMessageForm] = useState<string>("");
   const [messageResponse, setMessageResponse] = useState<string>("");
 
+  const formatBytes = (a: number) => {
+    const ziseOnMegabytes = parseFloat((a / 1048576).toFixed(2));
+
+    return ziseOnMegabytes;
+  };
+
+  const checkFile = () => {
+    if (archivos !== null) {
+      if (archivos[0].type !== "application/pdf") {
+        setMessageResponse("Tipo de archivo no valido");
+        return true;
+      }
+
+      if (formatBytes(archivos[0].size) > 3) {
+        setMessageResponse("el tamaño del archivo es demasiado grande");
+        return true;
+      }
+    }
+  };
+
   const handleFileUpluad = () => {
     if (inputFileRef.current !== null) {
       inputFileRef.current.click();
     }
   };
 
+  const handleReset = () => {
+    if (formRef.current !== null) {
+      formRef.current.reset();
+      setArchivos(null);
+      setNameForm("");
+      setEmailForm("");
+      setPhoneForm("");
+      setMessageForm("");
+      setMessageResponse("");
+    }
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     closeLoading(true);
+    const errorOnFile = checkFile();
+
+    if (formRef.current !== null && errorOnFile) {
+      handleReset();
+    }
 
     const formData = new FormData();
-    formData.append("subject", "Enviado desde web");
+    formData.append("subject", "Enviado desde web Grupo Vaszquez");
     formData.append("message", messageForm);
     formData.append(
       "html",
@@ -69,11 +108,25 @@ const Form: FC<Props> = ({ closeLoading }) => {
     // }
   };
 
+  useEffect(() => {
+    if (formRef.current !== null) {
+      if (messageResponse === "Mensaje enviado con éxito") {
+        handleReset();
+      }
+    }
+  }, [formRef, messageResponse]);
+
+  useEffect(() => {
+    if (archivos !== null) {
+      checkFile();
+    }
+  }, [archivos]);
+
   return (
     <form
-      // ref={formRef}
+      ref={formRef}
       onSubmit={handleSubmit}
-      className="w-full p-8 flex flex-col justify-around items-center bg-sky-800 shadow-2xl relative overflow-hidden"
+      className="w-full p-4 flex flex-col justify-around items-center bg-sky-800 shadow-2xl relative overflow-hidden md:p-10"
     >
       <input
         type="text"
@@ -128,7 +181,7 @@ const Form: FC<Props> = ({ closeLoading }) => {
       />
       <textarea
         name="message"
-        className="w-full min-h-[10rem] my-6 p-2 text-zinc-200 border border-zinc-200 border-opacity-70 bg-transparent placeholder-zinc-50 placeholder-opacity-70 outline-none"
+        className="w-full min-h-[10rem] my-6 p-2 text-zinc-200 border border-zinc-200 border-opacity-70 bg-transparent placeholder-zinc-50 placeholder-opacity-70 outline-none md:min-h-[15rem]"
         placeholder="Mensaje"
         required
         onChange={(e) => setMessageForm(e.target.value)}
@@ -137,12 +190,18 @@ const Form: FC<Props> = ({ closeLoading }) => {
       {messageResponse === "" ? (
         <button
           type="submit"
-          className="w-full py-2  text-sky-800 text-center bg-zinc-200 opacity-70 outline-none rounded-none hover:opacity-100 cursor-pointer transition-all duration-200"
+          className={`w-full py-2 text-center  text-sky-800 bg-zinc-200 opacity-70 outline-none rounded-none hover:opacity-100 cursor-pointer transition-all duration-200`}
         >
           Enviar mensaje
         </button>
       ) : (
-        <p className="w-full my-6 p-2 text-zinc-200 text-center">
+        <p
+          className={`w-full my-6 p-2 ${
+            !messageResponse.includes("éxito")
+              ? "text-red-600 bg-zinc-200"
+              : "text-zinc-200 bg-sky-800"
+          } text-center`}
+        >
           {messageResponse}
         </p>
       )}

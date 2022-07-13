@@ -61,7 +61,7 @@ const SwiperHydeSalon: FC = () => {
         {imagesList.map(({ url, text }) => (
           <SwiperSlide key={url}>
             <>
-              <div className="h-96 pb-4 relative">
+              <div className="h-96 pb-4 relative lg:h-[30rem] xl:h-[45rem]">
                 <img
                   src={url}
                   alt={text}

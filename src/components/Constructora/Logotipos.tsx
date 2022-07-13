@@ -5,7 +5,7 @@ import LogoAmy from "../../public/assets/logos/amy.png";
 
 const Logotipos: FC = () => {
   return (
-    <div className="w-full p-4 mb-8 grid grid-cols-2 gap-4 place-items-center">
+    <div className="w-full p-4 mb-8 grid grid-cols-2 gap-4 place-items-center md:p-10 lg:m-0">
       <img
         src={LogoCivsa.src}
         alt="Logotipo de TRANSPORTES VASQUEZ SA de CV"

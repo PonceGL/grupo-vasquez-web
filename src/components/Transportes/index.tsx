@@ -11,7 +11,7 @@ import Contact from "../../common/Contact";
 const Transportes: FC = () => {
   return (
     <section
-      className="w-full pt-32 bg-regal-blue z-[1] relative"
+      className="w-full max-w-screen-2xl pt-32 bg-regal-blue z-[1] relative lg:pl-[25%]"
       id="Transportes"
     >
       <Presentation />
@@ -27,7 +27,7 @@ const Transportes: FC = () => {
           addStyles="px-0 py-4"
         />
       </div>
-      <div className="w-full h-80 absolute bottom-0 right-0 z-[-1] branch-svg-curved-lines opacity-50" />
+      <div className="w-full h-80 absolute bottom-0 right-0 z-[-1] branch-svg-curved-lines opacity-50 lg:h-[40rem]" />
     </section>
   );
 };
